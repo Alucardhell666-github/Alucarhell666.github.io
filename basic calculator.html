@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Basic Calculator</title>
+		<style type="text/css">
+			input
+			{
+				margin-left: 400px;
+				font-size: 30px;
+			}
+			#calci
+			{
+				width: 400px;
+				height: 400px;
+				border: 35px ridge peachpuff;
+				background-color: pink;
+				margin-left: 400px;
+			}
+			#ans
+			{
+				width: 345px;
+				height: 100px;
+				border: 7px inset darkgrey;
+				margin-left: 15px;
+				margin-top: 15px;
+				background-color: lightgrey;
+				font-size: 30px;
+			}
+			button
+			{
+				width: 250px;
+				height: 50px;
+				margin-top: 10px;
+				margin-left: 50px;
+				font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript" >
+			function add() 
+			{
+				var a=document.getElementById("n1").value;
+				var b=document.getElementById("n2").value;
+				a=parseInt(a);
+				b=parseFloat(b);
+				document.getElementById("ans").innerHTML=(a+b);
+			}
+			function sub() 
+			{
+				var a=document.getElementById("n1").value;
+				var b=document.getElementById("n2").value;
+				a=parseFloat(a);
+				b=parseInt(b);
+				document.getElementById("ans").innerHTML=(a-b);
+			}
+			function mul() 
+			{
+				var a=document.getElementById("n1").value;
+				var b=document.getElementById("n2").value;
+				a=parseInt(a);
+				b=parseInt(b);
+				document.getElementById("ans").innerHTML=(a*b);
+			}
+			function div() 
+			{
+				var a=document.getElementById("n1").value;
+				var b=document.getElementById("n2").value;
+				a=parseInt(a);
+				b=parseInt(b);
+				document.getElementById("ans").innerHTML=(a/b);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="n1" placeholder="Enter First Number"/><br><br>
+		<input type="number" id="n2" placeholder="Enter Second Number"/><br><br><br>
+		<div id="calci">
+			<p id="ans"></p>
+			<button id="add" onclick="add()"><b>+</b></button>
+			<button id="subt" onclick="sub()"><b>-</b></button>
+			<button id="mul" onclick="mul()"><b>*</b></button>
+			<button id="divi" onclick="div()"><b>/</b></button>
+		</div>
+	</body>
+</html>
